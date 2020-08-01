@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+body{
+  font-family: 'Concert One', cursive;
+}
+*{
+  &::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: rgba(200,200,200,.6);
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #28c5ff 0%,#bcffc0 100%);
+    border-radius: 8px;
+  }
+}
+.app{
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+}
+.wrap{
+  width: 500px;
+}
+$height: 46px;
+.select{
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  &.open{
+    .select{
+      &__dropdown{
+        display: block;
+      }
+      &__input{
+        border-bottom: none;
+      }
+      &__backdrop{
+        display: block;
+      }
+    }
+  }
+  &__input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    height: $height;
+    padding: 0 1rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+  &__dropdown{
+    display: none;
+    position: absolute;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 12px 1px rgba(0,0,0,.3);
+  }
+  &__list{
+  
+  }
+  &__item{
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+    transition: all .2s;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    cursor: pointer;
+    &.active{
+      background-color: aqua;
+    }
+    &:not(.active):hover{
+      background-color: rgba(0,0,0,.1);
+    }
+  }
+  &__backdrop{
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+}
