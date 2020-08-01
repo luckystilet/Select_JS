@@ -1,0 +1,75 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  font-size: 1.6rem;
+}
+footer{
+  margin-top: auto;
+}
+*{
+	box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-weight: 400;
+}
+img{
+	vertical-align: top;
+}
+p{
+	margin: 0 auto;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+button{
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+th{
+	font-weight: normal;
+}
+input, textarea, button{
+	outline: none;
+	border: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #d2d2d2;
+  -webkit-text-fill-color: #4d4b4b;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*# sourceMappingURL=/base.ee376513.css.map */

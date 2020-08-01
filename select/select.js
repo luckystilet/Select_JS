@@ -83,6 +83,10 @@ export class Select {
     this.$arrow.classList.remove('fa-chevron-up')
   }
   select(id) {
+    if (this.selectedId === id){
+      this.close()
+      return
+    }
     this.selectedId = id
     this.$value.textContent = this.current.value
     this.$items.forEach(el=>{
